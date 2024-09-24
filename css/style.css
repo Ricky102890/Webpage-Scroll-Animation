@@ -1,7 +1,7 @@
 /* Fonts & Imports */
 @font-face {
-font-family: '';
-src: url();
+font-family: 'Design';
+src: url(/assets/fonts/DESIGNER.otf);
 
 }
 
@@ -10,7 +10,7 @@ src: url();
 padding: 0;
 margin: 0;
 box-sizing: border-box;
-font-family: '';
+font-family: 'Design', sans-serif;
 
 }
 
@@ -20,7 +20,7 @@ font-family: '';
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:auto;
 }
 
 body {
@@ -28,10 +28,67 @@ body {
     min-width: 320px;
     height: auto;
     min-height: 100vh;
+    background: rgb(17, 17, 47);
+    scroll-snap-type: y mandatory;
 }
-
-.container {
+.current {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+section {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    height: auto;
+    text-align: center;
+    margin: 20rem auto;
+    padding: 8rem 2rem;
+    scroll-snap-align: center;
+    transition: all 1s ease;
+}
+section h4 {
+    letter-spacing: .3rem;
+}
+.sec-one {
+
+}
+.sec-one h2 {
+    color: gold;
+    font-size: 3rem;
+    letter-spacing: .3rem;
+    margin-bottom: 1rem;
+}
+.sec-one h4 {
+    color: gray;
+}
+.sec-two {
+
+}
+.sec-two h2 {
+    color: blue;
+    font-size: 3rem;
+    letter-spacing: .3rem;
+    margin-bottom: 1rem;
+}
+.sec-two h4 {
+    color: gray;
+}
+.sec-three {
+
+}
+.sec-three h2 {
+    color: green;
+    font-size: 3rem;
+    letter-spacing: .3rem;
+    margin-bottom: 1rem;
+}
+.sec-three h4 {
+    color: gray;
+}
+.animate {
+    transform: translateX(-100%);
+}
+.show-animate {
+    transform: translateX(0);
 }
